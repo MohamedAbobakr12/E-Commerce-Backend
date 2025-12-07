@@ -15,6 +15,10 @@ import { connectDB } from "./lib/db.js";
 dotenv.config();
 
 const app = express();
+app.use(cors({
+    origin: "https://e-commerce-app-live.vercel.app",
+    credentials: true,
+}));
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json({ limit: "10mb" })); // allows you to parse the body of the request
