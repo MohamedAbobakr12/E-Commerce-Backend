@@ -21,6 +21,7 @@ app.use(
         origin: process.env.CLIENT_URL || "*",
         methods: ["GET", "POST", "PUT", "DELETE"],
         allowedHeaders: ["Content-Type", "Authorization"],
+        credentials: true,
     })
 );
 const PORT = process.env.PORT || 5000;
